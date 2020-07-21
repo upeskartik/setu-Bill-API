@@ -1,0 +1,33 @@
+###
+POST http://localhost:4000/api/v1/add
+Content-Type: application/json
+
+{
+    "mobileNumber": 9369786516,
+    "customerName": "G",
+    "dueAmount": 50000,
+    "dueDate": "2020-12-20"
+}
+
+###
+POST  http://localhost:4000/api/v1/fetchBill
+Content-Type: application/json
+X-API-KEY:  123
+
+{
+    "mobileNumber": "9369786516"
+}
+
+###
+POST  http://localhost:4000/api/v1/payment-update
+Content-Type: application/json
+X-API-KEY:  123
+
+{
+    "refID": "fbhrvkcvndq4l",
+    "transaction": {
+        "amountPaid": "50000",
+        "date": "2020-06-05",
+        "id": "OUAB012316"
+    }
+}
